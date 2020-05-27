@@ -1,0 +1,79 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d53ff7fc49ccf53ed0694e6596eebefb",
+    "packages": [
+        {
+            "name": "dragonbe/vies",
+            "version": "2.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DragonBe/vies.git",
+                "reference": "824a870b133f92505c2c0ce8297fcf88b1595495"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DragonBe/vies/zipball/824a870b133f92505c2c0ce8297fcf88b1595495",
+                "reference": "824a870b133f92505c2c0ce8297fcf88b1595495",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-soap": "*",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "ext-pcntl": "*",
+                "infection/infection": "^0.8",
+                "pdepend/pdepend": "^2.5",
+                "phing/phing": "^2.16",
+                "phploc/phploc": "^4.0",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/php-invoker": "^2.0",
+                "phpunit/phpunit": "^7.1",
+                "sebastian/phpcpd": "^4.0",
+                "sensiolabs/security-checker": "^5.0",
+                "squizlabs/php_codesniffer": "^3.2"
+            },
+            "type": "tool",
+            "autoload": {
+                "psr-4": {
+                    "DragonBe\\Vies\\": "src/Vies"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michelangelo van Dam",
+                    "email": "dragonbe@gmail.com",
+                    "homepage": "http://dragonbe.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "EU VAT numbers validation using the VIES Service of the European Commission",
+            "homepage": "https://github.com/DragonBe/vies",
+            "keywords": [
+                "ec",
+                "eu",
+                "vat",
+                "vies"
+            ],
+            "time": "2020-02-11T12:52:10+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

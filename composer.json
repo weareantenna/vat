@@ -1,0 +1,14 @@
+{
+    "name": "weareantenna/vat",
+    "description": "A library to deal with VAT Numbers within Teamleader CRM",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Antenna\\Vat\\": "src/"
+        }
+    },
+    "require": {
+        "dragonbe/vies": "^2.1"
+    },
+    "license": "MIT"
+}
