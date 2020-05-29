@@ -2,6 +2,7 @@
     "name": "weareantenna/vat",
     "description": "A library to deal with VAT Numbers within Teamleader CRM",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Antenna\\Vat\\": "src/"
@@ -13,10 +14,10 @@
         }
     },
     "require": {
+        "php": "^7.4",
         "ext-soap": "*",
         "dragonbe/vies": "^2.1"
     },
-    "license": "MIT",
     "require-dev": {
         "phpunit/phpunit": "^9.1"
     }
