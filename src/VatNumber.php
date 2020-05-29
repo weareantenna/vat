@@ -21,7 +21,7 @@ final class VatNumber
 
     public function country() : Country
     {
-        $countryCode = substr($this->stripped(), 0, 2);
+        $countryCode = substr($this->toNormalizedString(), 0, 2);
 
         try {
             return Country::fromCode($countryCode);
@@ -32,18 +32,23 @@ final class VatNumber
         }
     }
 
-    public function number() : string
+    public function normalizedNumber() : string
     {
-        return substr($this->stripped(), 2);
+        return substr($this->toNormalizedString(), 2);
     }
 
-    public function stripped() : string
+    public function toString() : string
+    {
+        return $this->vatNumber;
+    }
+
+    public function toNormalizedString() : string
     {
         return preg_replace('/[^a-zA-Z0-9]+/', '', $this->vatNumber);
     }
 
     public function isFormatValid() : bool
     {
-        return $this->country()->validator()->validate($this->number());
+        return $this->country()->validator()->validate($this->normalizedNumber());
     }
 }

@@ -33,36 +33,36 @@ final class TeamleaderFormatter implements Formatter
     {
         return $vatNumber->country()->code()
             . ' '
-            . substr($vatNumber->number(), 0, 4)
+            . substr($vatNumber->normalizedNumber(), 0, 4)
             . '.'
-            . substr($vatNumber->number(), 4, 3)
+            . substr($vatNumber->normalizedNumber(), 4, 3)
             . '.'
-            . substr($vatNumber->number(), 7);
+            . substr($vatNumber->normalizedNumber(), 7);
     }
 
     private function formatWithSpace(VatNumber $vatNumber) : string
     {
         return $vatNumber->country()->code()
             . ' '
-            . $vatNumber->number();
+            . $vatNumber->normalizedNumber();
     }
 
     private function formatDefault(VatNumber $vatNumber) : string
     {
         return $vatNumber->country()->code()
-            . $vatNumber->number();
+            . $vatNumber->normalizedNumber();
     }
 
     private function formatDutch(VatNumber $vatNumber)
     {
         return $vatNumber->country()->code()
             . ' '
-            . substr($vatNumber->number(), 0, 4)
+            . substr($vatNumber->normalizedNumber(), 0, 4)
             . '.'
-            . substr($vatNumber->number(), 4, 2)
+            . substr($vatNumber->normalizedNumber(), 4, 2)
             . '.'
-            . substr($vatNumber->number(), 6, 3)
+            . substr($vatNumber->normalizedNumber(), 6, 3)
             . '.'
-            . substr($vatNumber->number(), 9);
+            . substr($vatNumber->normalizedNumber(), 9);
     }
 }

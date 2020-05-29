@@ -27,7 +27,7 @@ final class SoapViesValidator implements ViesValidator
                 [
                     [
                         'countryCode' => $vatNumber->country()->code(),
-                        'vatNumber' => $vatNumber->number(),
+                        'vatNumber' => $vatNumber->normalizedNumber(),
                     ]
                 ]
             );
