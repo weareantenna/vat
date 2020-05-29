@@ -15,8 +15,11 @@ composer require weareantenna/vat
 ```php
 <?php
 
-$vatNumber = new \Antenna\Vat\VatNumber('BE0123 456 749');
-$validator = new \Antenna\Vat\ViesValidator\SoapViesValidator();
+use Antenna\Vat\VatNumber;
+use Antenna\Vat\ViesValidator\SoapViesValidator;
+
+$vatNumber = new VatNumber('BE0123 456 749');
+$validator = new SoapViesValidator();
 
 echo $vatNumber->toString(); // BE0123 456 749
 echo $vatNumber->toNormalizedString(); // BE0123456749
