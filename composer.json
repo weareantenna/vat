@@ -8,6 +8,7 @@
         }
     },
     "require": {
+        "ext-soap": "*",
         "dragonbe/vies": "^2.1"
     },
     "license": "MIT"

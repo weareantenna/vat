@@ -65,6 +65,8 @@ final class Country
 
     public function validator() : Validator\ValidatorInterface
     {
-        return new (self::COUNTRIES[$this->code])();
+        $validatorClass = self::COUNTRIES[$this->code];
+
+        return new $validatorClass();
     }
 }
