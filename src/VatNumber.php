@@ -44,7 +44,7 @@ final class VatNumber
 
     public function toNormalizedString() : string
     {
-        return preg_replace('/[^a-zA-Z0-9]+/', '', $this->vatNumber);
+        return preg_replace('/[^A-Z0-9]+/', '', strtoupper($this->vatNumber));
     }
 
     public function isFormatValid() : bool

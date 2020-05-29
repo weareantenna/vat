@@ -91,4 +91,11 @@ final class VatNumberTest extends TestCase
         $vatNumber = new VatNumber('BE0123456748');
         self::assertFalse($vatNumber->isFormatValid());
     }
+
+    public function testItDealsWithLowerCaseLetters() : void
+    {
+        $vatNumber = new VatNumber('be0123456749');
+        self::assertEquals(Country::fromCode('BE'), $vatNumber->country());
+        self::assertTrue($vatNumber->isFormatValid());
+    }
 }
