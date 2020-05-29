@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Antenna\Vat\Tests;
+namespace Antenna\Vat\Tests\Formatter;
 
-use Antenna\Vat\TeamleaderFormatter;
+use Antenna\Vat\Formatter\TeamleaderFormatter;
 use Antenna\Vat\VatNumber;
 use PHPUnit\Framework\TestCase;
 

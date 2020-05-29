@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Antenna\Vat;
+namespace Antenna\Vat\ViesValidator;
 
+use Antenna\Vat\VatNumber;
 use RuntimeException;
 use SoapClient;
 use Throwable;

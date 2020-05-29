@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Antenna\Vat;
+namespace Antenna\Vat\Formatter;
 
+use Antenna\Vat\Country;
+use Antenna\Vat\VatNumber;
 use RuntimeException;
 use function substr;
 
