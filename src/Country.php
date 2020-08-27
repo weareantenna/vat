@@ -42,7 +42,8 @@ final class Country
         'GB' => Validator\ValidatorGB::class,
     ];
 
-    private string $code;
+    /** @var string */
+    private $code;
 
     private function __construct(string $code)
     {

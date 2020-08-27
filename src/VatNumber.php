@@ -12,7 +12,8 @@ use function substr;
 
 final class VatNumber
 {
-    private string $vatNumber;
+    /** @var string */
+    private $vatNumber;
 
     public function __construct(string $vatNumber)
     {

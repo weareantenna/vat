@@ -4,7 +4,7 @@ This library will help you deal with VAT numbers in a controlled manner. It uses
 
 ## Installation
 
-This package requires PHP 7.4 or higher.
+This package requires PHP 7.1 or higher.
 
 ```
 composer require weareantenna/vat 
