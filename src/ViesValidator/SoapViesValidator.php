@@ -13,7 +13,8 @@ final class SoapViesValidator implements ViesValidator
 {
     private const VIES_WDSL = 'https://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl';
 
-    private SoapClient $soapClient;
+    /** @var SoapClient|null */
+    private $soapClient;
 
     public function __construct(?SoapClient $soapClient = null)
     {
