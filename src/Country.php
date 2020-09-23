@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Antenna\Vat;
 
+use Antenna\Vat\Exception\InvalidCountryCodeException;
 use DragonBe\Vies\Validator;
-use InvalidArgumentException;
 use function array_key_exists;
-use function sprintf;
 
 final class Country
 {
@@ -50,13 +49,16 @@ final class Country
         $this->code = $code;
     }
 
+    /**
+     * @throws InvalidCountryCodeException
+     */
     public static function fromCode(string $code) : self
     {
         if (array_key_exists($code, self::COUNTRIES)) {
             return new self($code);
         }
 
-        throw new InvalidArgumentException(sprintf('Code "%s" is not a valid country code.', $code));
+        throw new InvalidCountryCodeException($code);
     }
 
     public function code() : string

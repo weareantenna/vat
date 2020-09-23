@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Antenna\Vat\ViesValidator;
 
+use Antenna\Vat\Exception\ViesException;
 use Antenna\Vat\VatNumber;
-use RuntimeException;
 use SoapClient;
 use Throwable;
 
@@ -34,7 +34,7 @@ final class SoapViesValidator implements ViesValidator
                 ]
             );
         } catch (Throwable $t) {
-            throw new RuntimeException('Vies Error: ' . $t->getMessage());
+            throw new ViesException($t->getMessage(), $t->getCode());
         }
 
         return $response->valid;

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Antenna\Vat\Formatter;
 
 use Antenna\Vat\Country;
+use Antenna\Vat\Exception\InvalidFormatException;
 use Antenna\Vat\VatNumber;
-use RuntimeException;
 use function substr;
 
 final class TeamleaderFormatter implements Formatter
@@ -14,7 +14,7 @@ final class TeamleaderFormatter implements Formatter
     public function format(VatNumber $vatNumber) : string
     {
         if (! $vatNumber->isFormatValid()) {
-            throw new RuntimeException('Can only format VAT numbers with correct format');
+            throw new InvalidFormatException();
         }
 
         switch ($vatNumber->country()) {
